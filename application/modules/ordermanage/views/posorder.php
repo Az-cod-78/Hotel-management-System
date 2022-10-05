@@ -427,11 +427,7 @@ foreach($scan as $file) {
           <?php } ?>
           <li class="seelist"> <a href="#settings" role="tab" data-toggle="tab" class="comorder newtab" id="todayonlieorder" onclick="giveselecttab(this)"><i class="fa fa-shopping-bag smallview"></i> <span class="responsiveview"><?php echo display('onlineord');?></span> </a> <a href="" class="notif"><span class="label label-danger count">0</span></a> </li>
           <li> <a href="#messages" role="tab" data-toggle="tab" class="torder newtab" id="todayorder" onclick="giveselecttab(this)"><i class="fa fa-first-order smallview"></i> <span class="responsiveview"><?php echo display('tdayorder');?></span> </a> </li>
-          <?php if ($new_version!=$myversion) {
-		  if($versioncheck->version!=$new_version){
-		  ?><li class="mobiletag">
-          <a href="<?php echo base_url("dashboard/autoupdate") ?>" class="updateanimate"><i class="fa fa-warning fa-warning-bg"></i><span class="f-size-weight">Update Available</span></a>
-          </li><?php } } ?>
+        
           <li class="mobiletag"><a href="javascript:;" class="btn" onclick="closeopenresister()" role="button"><i class="fa fa-window-close fa-lg"></i></a></li>
           <li class="mobiletag"><a  href="#"><i class="fa fa-keyboard hover-q text-muted" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<table class='table table-condensed table-striped' >
         <tr>
@@ -587,11 +583,7 @@ function current_version(){
         <div class="tgbar">
         
           <a href="javascript:;" class="btn" onclick="closeopenresister()" role="button"><i class="fa fa-window-close fa-lg"></i></a>
-          <?php if ($new_version>$myversion) {
-		  if($versioncheck->version!=$new_version){
-		  ?>
-          <a href="<?php echo base_url("dashboard/autoupdate") ?>" class="updateanimate"><i class="fa fa-warning fa-warning-bg"></i><span class="f-size-weight">Update Available</span></a>
-          <?php } } ?>
+        
          <a id="fullscreen" href="#"><i class="pe-7s-expand1"></i></a> <a  href="#"><i class="fa fa-keyboard hover-q text-muted" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<table class='table table-condensed table-striped' >
         <tr>
             <th>Operations</th>
