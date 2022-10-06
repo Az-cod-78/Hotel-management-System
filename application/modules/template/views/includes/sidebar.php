@@ -147,7 +147,6 @@
    			),
    			"language" => array("controller" => "language","method"     => "index","permission" => "read"),    
     		"application_setting" => array("controller" => "setting","method" => "index","permission" => "read"), 
-    		"server_setting" => array("controller" => "serversetting","method"  => "index","permission" => "read"),
 			"factory_reset" => array("controller" => "setting","method"  => "factoryreset","permission" => "read"), 
     		"currency" => array("controller" => "currency","method" => "index","permission" => "read"), 
     		"country" => array("controller" => "country_city_list","method"=> "index", "permission" => "read"),   
@@ -353,8 +352,7 @@
             </ul>
         </li>
         
-        <li class="treeview"><a href="<?php echo base_url('addon/module/index') ?>"><i class="fa fa-adn"></i><span><?php echo display('moduless')?></span> </a></li>
-        <li class="treeview"><a href="<?php echo base_url('addon/theme/index') ?>"><i class="fa fa-adn"></i><span><?php echo display('themes')?></span> </a></li>
+        
 		<li class="treeview <?php echo (($this->uri->segment(2)=="role" ||$this->uri->segment(2)=="module_permission")?"active":null) ?>">
             <a href="#">
 
@@ -376,12 +374,7 @@
 
         
          <li class="treeview <?php echo (($this->uri->segment(2)=="setting")?"active":null) ?>">
-            <a href="#">
-                <i class="ti-settings"></i><span><?php echo display('web_setting')?></span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
+           
             <ul class="treeview-menu">
                 <li><a href="<?php echo base_url('dashboard/web_setting/') ?>"><?php echo display('common_setting')?></a></li>
                 <li><a href="<?php echo base_url('dashboard/web_setting/storetime') ?>"><?php echo display('storetime')?></a></li>
@@ -397,7 +390,7 @@
             </ul>
         </li>
         <li class="treeview <?php echo (($this->uri->segment(2)=="autoupdate")?"active":null) ?>">
-           <a href="<?php echo base_url('dashboard/autoupdate') ?>"><i class="ti-reload"></i> <span><?php echo display('autoupdate')?></span></a>
+          
         </li>
         <?php } ?>
         <!-- ends of admin area -->
